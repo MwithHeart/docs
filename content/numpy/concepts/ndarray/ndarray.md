@@ -1,6 +1,6 @@
 ---
 Title: 'ndarray'
-Description: 'An ndarray is a multi-dimensional array of items of the same type and size.'
+Description: 'An `ndarray` is a data structure that takes homogenous items (items of the same type and size)'
 Subjects:
   - 'Computer Science'
   - 'Data Science'
@@ -14,20 +14,20 @@ CatalogContent:
   - 'paths/data-science'
 ---
 
-An **`ndarray`** is a multi-dimensional array of items of the same type and size. The number of dimensions and items contained in the array is defined with a [`tuple`](https://www.codecademy.com/resources/docs/python/tuples) of N non-negative integers that specify each dimension's size. An `ndarray` has an associated data-type object which specifies the `dtype` stored in the `ndarray`.
+An **`ndarray`** is a data structure that takes homogenous items (items of the same type and size). The number of dimensions and items contained in the array is defined with a [`tuple`](https://www.codecademy.com/resources/docs/python/tuples) of N non-negative integers that specify each dimension's size. An `ndarray` has an associated data-type object which specifies the `dtype` (datatype) stored in the `ndarray`.
 
-Like other container objects in Python, `ndarray` items can be accessed by indexing and slicing the array. There are also a large number of methods and attributes of the `ndarray` that can be used to access and manipulate its contents.
+An `ndarray` is also a container object in Python, like lists and tuples but with its unique features. It is easier for a computer to process an `ndarray` as it contains homogenous items, unlike lists that often take various datatypes like strings and integers combined. The items in an `ndarray` can be accessed by indexing and slicing the array. There are also a number of methods and attributes of the `ndarray` that can be used to access and manipulate its contents.
 
 Separate instances of an `ndarray` can share contents so that changes in one `ndarray` can be reflected in another. This happens when an `ndarray` is created as a "view" of another `ndarray` known as the "base".
 
-## Creating a `ndarray`
+## Creating an `ndarray`
 
 There are several routines for creating `ndarray` objects. These are preferred to using the `ndarray` constructor, which operates at a very low level. Here are a few examples:
 
 |     Method      | Syntax                               | Description                                                                                                                                                                      |
 | :-------------: | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   `.empty()`    | `numpy.empty(shape,dtype)`           | Creates a `ndarray` of the given `shape` tuple, and the optional `dtype` (default is `numpy.float64`) with uninitialized values.                                                 |
-| `.empty_like()` | `numpy.empty_like(model,dtype)`      | Creates a `ndarray` based on the `shape` of the `model`, with the optional `dtype` (default is data type of `model`) with uninitialized values.                                  |
+|   `.empty()`    | `numpy.empty(shape,dtype)`           | Creates an `ndarray` of the given `shape` tuple, and the optional datatype (default is `numpy.float64`) with uninitialized values.                                                 |
+| `.empty_like()` | `numpy.empty_like(model,dtype)`      | Creates an `ndarray` based on the `shape` of the `model`, with the optional `dtype` (default is data type of `model`) with uninitialized values.                                  |
 |    `.ones()`    | `numpy.ones(shape,dtype)`            | Operates the same as `.empty()`, but initializes all the array elements with a value of one.                                                                                     |
 | `.ones_like()`  | `numpy.ones_like(model,dtype)`       | Operates the same as `.empty_like()`, but initializes all the array elements with a value of one.                                                                                |
 |   `.zeros()`    | `numpy.zeros(shape,dtype)`           | Operates the same as `.empty()`, but initializes all the array elements with a value of zero.                                                                                    |
@@ -69,7 +69,7 @@ This produces the following output:
 
 ## Operations on an `ndarray`
 
-The standard mathematical [operations](https://www.codecademy.com/resources/docs/python/operators), when applied to `ndarrays` are evaluated internally as equivalent universal functions ("ufuncs") which are functions that operate on `ndarrays` on an element-by-element basis. There are over 60 of these universal functions and there are ufuncs for each mathematical operation. Some of the most popular operations are summarized below:
+The standard mathematical [operations](https://www.codecademy.com/resources/docs/python/operators), when applied to `ndarrays` are evaluated internally as equivalent universal functions ("ufuncs") which are functions that operate on `ndarrays` on an element-by-element basis. There are over 60 ufuncs in total and there are also ufuncs for each mathematical operation. Some of the most popular operations are summarized below:
 
 | Operator | Ufunc                     | Description                                                                         |
 | :------: | ------------------------- | ----------------------------------------------------------------------------------- |
@@ -116,3 +116,4 @@ This produces the following output:
  [10  5 10]
  [16  8 16]]
 ```
+
